@@ -98,10 +98,9 @@
 .balloon:nth-child(5) {
     animation: flying-b 8s infinite linear;
     position: absolute;
-    width: 50px;
     z-index: 4;
-    top: 60%;
-    left: 20%;
+    top: 15%;
+    left: 18%;
 }
 
 .logincanvas {
@@ -119,7 +118,30 @@
     background: linear-gradient(to right, #2c3e50, #2980b9);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     overflow: none;
-
-
-
 }
+input:focus {
+    border-bottom: none;
+    border-top: 3px solid black;
+    transition: 0.4s;
+    box-shadow: 2px 2px 2px 2px lightblue;
+}
+
+.bikeimg {
+    position: absolute;
+    bottom: 98%;
+    animation: biker 10s infinite linear;
+}
+@keyframes biker { 
+    /* from {left:80%; bottom:100%;}
+    to{left:0%; bottom: 100%;} */
+    0%{left:80%; bottom: 100%;}
+    50%{left:0%; bottom: 100%;}
+    100%{left:80%; bottom: 100%;} 
+}
+
+
+.login-bg {
+    background: linear-gradient(113.3deg, rgb(134, 209, 228) -1.8%, rgb(60, 80, 115) 86.4%);
+}
+
+

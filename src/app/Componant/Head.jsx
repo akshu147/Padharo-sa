@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMenuOutline } from "react-icons/io5";
 import { GiCrossMark } from "react-icons/gi";
+import Link from 'next/link';
 
 
 const Head = () => {
@@ -23,8 +24,8 @@ const Head = () => {
                     <img className='z-10' width="100%" src="https://blog.poply.com/content/images/2021/10/logo.png" alt="logo" />
                 </figure>
                 <div className='flex items-center gap-[25px] text-[10px] sm:text-[15px] text-white font-semibold'>
-                    <div className='hidden sm:block cursor-pointer'>LOGIN</div>
-                    <div className='hidden sm:block cursor-pointer'>SIGN-UP</div>
+                    <button className='hidden sm:block cursor-pointer'>LOGIN</button>
+                    <button className='hidden sm:block cursor-pointer'>SIGN-UP</button>
                     <div className='hidden md:block'><GiHamburgerMenu className='text-[35px] cursor-pointer' /></div>
                     <div onClick={changecanvaswidth} className='block md:hidden relative'><IoMenuOutline className='text-[35px] cursor-pointer' /></div>
                 </div>
@@ -36,8 +37,8 @@ const Head = () => {
                     </figure>
                     <span onClick={() => { setcurrentstyle({ width: "-100%" }) }} className='text-white text-[25px] z-50'><GiCrossMark className="shadow-[2px_3px_20px_orange]" /></span>
                 </div>
-                <button className='cursor-pointer w-[150px] block m-[40px_auto] text-white rounded-[8px] border-[2px] border-white p-[10px_30px]'>LOGIN</button>
-                <button className='cursor-pointer w-[150px] block m-[40px_auto] text-white rounded-[8px] border-[2px] border-white p-[10px_30px]'>SIGN-UP</button>
+                <button className='cursor-pointer w-[80%] sm:w-[200px] block m-[40px_auto] text-white rounded-[8px] border-[2px] border-white p-[10px_10px]'><Link href={`/pages/login`}>LOGIN</Link></button>
+                <button className='cursor-pointer w-[80%] sm:w-[200px] block m-[40px_auto] text-white rounded-[8px] border-[2px] border-white p-[10px_10px]'>SIGN-UP</button>
                 <p className='text-white font-bold opacity-[0.5] underline tracking-wider'>CREATE</p>
                 <h2 className='text-white text-[30px] underline pb-[3px]'>Create an invitation</h2>
                 <h2 className='text-white text-[30px] underline'>Explore Event's Type</h2>
